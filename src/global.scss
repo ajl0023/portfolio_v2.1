@@ -1,0 +1,23 @@
+* {
+	margin: 0;
+
+	padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+}
+pre[class*='language-'],
+code[class*='language-'] {
+	white-space: normal !important;
+	overflow-y: hidden !important;
+	word-break: break-word;
+}
+html {
+	background: linear-gradient(#2c5e92, #552f6d);
+	background-attachment: fixed;
+	margin: 0;
+	background-repeat: no-repeat;
+}
+body {
+	max-width: 100%;
+	overflow-x: hidden;
+}

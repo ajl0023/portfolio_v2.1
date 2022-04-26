@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<style>
+		.cubes {
+			z-index: 1;
+		}
+
+		.cubes .cube {
+			z-index: 1;
+			position: absolute;
+			height: 100px;
+			width: 100px;
+			margin: 0;
+			-webkit-animation: cube-fade-in 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+			animation: cube-fade-in 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+			will-change: transform;
+		}
+
+		@-webkit-keyframes cube-fade-in {
+			0% {
+				opacity: 0;
+				-webkit-transform: scale(0.5);
+				transform: scale(0.5);
+			}
+		}
+
+		@keyframes cube-fade-in {
+			0% {
+				opacity: 0;
+				-webkit-transform: scale(0.5);
+				transform: scale(0.5);
+			}
+		}
+
+		.cubes .cube * {
+			z-index: 1;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+		}
+
+		.cubes .cube .shadow {
+			background: #8360c3;
+			top: 40%;
+		}
+
+		.cubes .cube .sides {
+			-webkit-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+			-webkit-perspective: 600px;
+			perspective: 600px;
+		}
+
+		.cubes .cube .sides div {
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			will-change: transform;
+		}
+
+		.cubes .cube .sides .front {
+			z-index: 1 !important;
+			-webkit-transform: rotateY(0deg) translateZ(50px);
+			transform: rotateY(0deg) translateZ(50px);
+		}
+
+		.cubes .cube .sides .back {
+			z-index: 1 !important;
+			-webkit-transform: rotateY(-180deg) translateZ(50px);
+			transform: rotateY(-180deg) translateZ(50px);
+		}
+
+		.cubes .cube .sides .left {
+			z-index: 1 !important;
+			-webkit-transform: rotateY(-90deg) translateZ(50px);
+			transform: rotateY(-90deg) translateZ(50px);
+		}
+
+		.cubes .cube .sides .right {
+			z-index: 1 !important;
+			-webkit-transform: rotateY(90deg) translateZ(50px);
+			transform: rotateY(90deg) translateZ(50px);
+		}
+
+		.cubes .cube .sides .top {
+			z-index: 1 !important;
+			-webkit-transform: rotateX(90deg) translateZ(50px);
+			transform: rotateX(90deg) translateZ(50px);
+		}
+
+		.cubes .cube .sides .bottom {
+			z-index: 1 !important;
+			-webkit-transform: rotateX(-90deg) translateZ(50px);
+			transform: rotateX(-90deg) translateZ(50px);
+		}
+	</style>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="" />
+		<link rel="icon" href="%svelte.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		%svelte.head%
+	</head>
+	<body>
+		<main>
+			<header><div id="header-hero"></div></header>
+			<div class="square-container">
+				<template id="cube-template">
+					<div class="cube">
+						<div class="shadow"></div>
+						<div class="sides">
+							<div class="back"></div>
+							<div class="top"></div>
+							<div class="left"></div>
+							<div class="front"></div>
+							<div class="right"></div>
+							<div class="bottom"></div>
+						</div>
+					</div>
+				</template>
+			</div>
+		</main>
+		<div id="root">%svelte.body%</div>
+	</body>
+</html>
