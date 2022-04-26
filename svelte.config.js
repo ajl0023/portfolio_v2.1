@@ -4,7 +4,10 @@ import path from 'path';
 
 export default {
 	kit: {
-		adapter: adapter({}),
+		adapter: adapter({ pages: 'docs', assets: 'docs' }),
+		prerender: {
+			default: true
+		},
 		vite: {
 			optimizeDeps: {},
 			resolve: {
