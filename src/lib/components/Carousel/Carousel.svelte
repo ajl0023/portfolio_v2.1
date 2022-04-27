@@ -33,9 +33,23 @@
 					{#each containers as row, i}
 						<div class="flex-row">
 							{#each row as item, i}
-								<div class="image-container">
+								<div
+									on:click="{() => {
+										window.open(item.url, '_blank').focus();
+									}}"
+									class="image-container"
+								>
 									<img alt="" src="{item.src}" />
-									<div class="hover-element-container"></div>
+									<div
+										on:mouseenter="{(e) => {
+											gsap.to(e.target, { opacity: 0 });
+										}}"
+										on:blur
+										on:mouseout="{(e) => {
+											gsap.to(e.target, { opacity: 1 });
+										}}"
+										class="hover-element-container"
+									></div>
 								</div>
 							{/each}
 						</div>

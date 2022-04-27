@@ -9,28 +9,28 @@
 
 	const project_images = [
 		{
-			url: 'https://github.com/ajl0023/chatApp',
-			src: base + '/images/projectImages/chatapp.png'
+			url: 'https://github.com/ajl0023/chatappv2',
+			src: base + '/images/projectImages/chatapp.jpg'
 		},
 		{
-			url: 'https://github.com/ajl0023/chatApp',
-			src: base + '/images/projectImages/readdit.png'
+			url: 'https://github.com/ajl0023/readditv3',
+			src: base + '/images/projectImages/readdit.jpg'
 		},
 		{
-			url: 'https://github.com/ajl0023/chatApp',
-			src: base + '/images/projectImages/covidTracker.png'
+			url: 'https://github.com/ajl0023/covid_app_v3',
+			src: base + '/images/projectImages/covidTracker.jpg'
 		},
 		{
-			url: 'https://github.com/ajl0023/chatApp',
-			src: base + '/images/projectImages/aviator.png'
+			url: 'https://github.com/ajl0023/aviatorSvelte',
+			src: base + '/images/projectImages/aviator.jpg'
 		},
 		{
-			url: 'https://github.com/ajl0023/chatApp',
-			src: base + '/images/projectImages/maliview.png'
+			url: 'https://github.com/ajl0023/Maliview-1-sveltekit',
+			src: base + '/images/projectImages/maliview.jpg'
 		},
 		{
-			url: 'https://github.com/ajl0023/chatApp',
-			src: base + '/images/projectImages/amitMain.png'
+			url: 'https://github.com/ajl0023/amit-apel-main-site',
+			src: base + '/images/projectImages/amitMain.jpg'
 		}
 	];
 	const container_count = Math.ceil(project_images.length / 6);
