@@ -1,4 +1,6 @@
 <script>
+	import { base } from '$app/paths';
+
 	import Carousel from '$lib/components/Carousel/Carousel.svelte';
 	import TechWrapper from '$lib/components/TechWrapper/TechWrapper.svelte';
 	import { carouselStore_store } from '$lib/stores/carouselStore-store';
@@ -8,27 +10,27 @@
 	const project_images = [
 		{
 			url: 'https://github.com/ajl0023/chatApp',
-			src: '/images/projectImages/chatapp.png'
+			src: base + '/images/projectImages/chatapp.png'
 		},
 		{
 			url: 'https://github.com/ajl0023/chatApp',
-			src: '/images/projectImages/readdit.png'
+			src: base + '/images/projectImages/readdit.png'
 		},
 		{
 			url: 'https://github.com/ajl0023/chatApp',
-			src: '/images/projectImages/covidTracker.png'
+			src: base + '/images/projectImages/covidTracker.png'
 		},
 		{
 			url: 'https://github.com/ajl0023/chatApp',
-			src: '/images/projectImages/aviator.png'
+			src: base + '/images/projectImages/aviator.png'
 		},
 		{
 			url: 'https://github.com/ajl0023/chatApp',
-			src: '/images/projectImages/maliview.png'
+			src: base + '/images/projectImages/maliview.png'
 		},
 		{
 			url: 'https://github.com/ajl0023/chatApp',
-			src: '/images/projectImages/amitMain.png'
+			src: base + '/images/projectImages/amitMain.png'
 		}
 	];
 	const container_count = Math.ceil(project_images.length / 6);
