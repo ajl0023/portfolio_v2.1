@@ -9,6 +9,7 @@ export default {
 		prerender: {
 			default: true
 		},
+		appDir: 'internal',
 		paths: {
 			// change below to your repo name
 			base: dev ? '' : '/portfolio_v2.1'
