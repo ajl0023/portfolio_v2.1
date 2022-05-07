@@ -34,6 +34,7 @@
 						<div class="flex-row">
 							{#each row as item, i}
 								<div
+									class:hidden="{item.visible === false}"
 									on:click="{() => {
 										window.open(item.url, '_blank').focus();
 									}}"
@@ -62,6 +63,9 @@
 </div>
 
 <style lang="scss">
+	.hidden {
+		visibility: hidden;
+	}
 	:root {
 		--sc-color-rgb-light-50p: rgba(93, 93, 93, 0.5);
 		--sc-color-rgb-light: #5d5d5d;
@@ -85,6 +89,7 @@
 		width: 100%;
 		flex-direction: column;
 		flex-shrink: 0;
+		flex-grow: 0;
 		.flex-row {
 			display: flex;
 

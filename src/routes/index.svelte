@@ -31,31 +31,44 @@
 		{
 			url: 'https://github.com/ajl0023/amit-apel-main-site',
 			src: base + '/images/projectImages/amitMain.jpg'
+		},
+		{
+			url: 'https://github.com/ajl0023/aiiwoe-v2',
+			src: base + '/images/projectImages/aiiwoe.jpg'
 		}
 	];
-	const container_count = Math.ceil(project_images.length / 6);
 	let project_images_set = [];
-	for (let i = 0; i < container_count; i++) {
-		const images_set = [];
-		for (let j = 0; j < 2; j++) {
-			let row = [];
+	let container_count =
+		project_images.length % 6 === 0 ? project_images.length : Math.ceil(project_images.length / 6);
+	const init = () => {
+		let images_set = [];
+		let row = [];
 
-			for (let k = j * 3; k < 3 * j + 3; k++) {
-				if (project_images[k]) {
-					row.push(project_images[k]);
-				} else {
-					row.push({
-						visibility: false
-					});
-				}
+		for (let sub = 0; sub < container_count * 6; sub++) {
+			if (!project_images[sub]) {
+				project_images[sub] = {
+					visible: false,
+					url: null,
+					src: null
+				};
 			}
-			images_set.push(row);
+			row.push(project_images[sub]);
+
+			if (row.length === 3) {
+				images_set.push(row);
+				row = [];
+			}
+
+			if (images_set.length === 2) {
+				project_images_set.push([...images_set]);
+
+				images_set = [];
+			}
 		}
 
-		project_images_set.push(images_set);
-	}
-	$carouselStore_store.pageCount = project_images_set.length;
-	onMount(() => {});
+		$carouselStore_store.pageCount = project_images_set.length;
+	};
+	init();
 </script>
 
 <div class="wrapper">
