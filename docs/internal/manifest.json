@@ -1,11 +1,11 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-c8327a34.js",
+    "file": "start-5c649f8b.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_index-c9a99df6.js",
-      "_paths-7d7c83dc.js",
+      "_index-44742a5b.js",
+      "_paths-6fe96a1a.js",
       "_preload-helper-a069e731.js"
     ],
     "dynamicImports": [
@@ -15,50 +15,50 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-3115229c.js",
+    "file": "pages/__layout.svelte-47487e02.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_preload-helper-a069e731.js",
-      "_index-c9a99df6.js"
+      "_index-44742a5b.js"
     ],
     "dynamicImports": [
       "src/utils/cubes.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-229a17be.css"
+      "assets/pages/__layout.svelte-f4d52428.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "error.svelte-513eda36.js",
+    "file": "error.svelte-20c82b31.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-c9a99df6.js"
+      "_index-44742a5b.js"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-ca2e3eb4.js",
+    "file": "pages/index.svelte-7a9d3fe2.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-c9a99df6.js",
-      "_paths-7d7c83dc.js"
+      "_index-44742a5b.js",
+      "_paths-6fe96a1a.js"
     ],
     "css": [
       "assets/pages/index.svelte-77a86786.css"
     ]
   },
-  "_index-c9a99df6.js": {
-    "file": "chunks/index-c9a99df6.js"
+  "_index-44742a5b.js": {
+    "file": "chunks/index-44742a5b.js"
   },
-  "_paths-7d7c83dc.js": {
-    "file": "chunks/paths-7d7c83dc.js",
+  "_paths-6fe96a1a.js": {
+    "file": "chunks/paths-6fe96a1a.js",
     "imports": [
-      "_index-c9a99df6.js"
+      "_index-44742a5b.js"
     ]
   },
   "_preload-helper-a069e731.js": {
