@@ -149,7 +149,7 @@
 		}
 		.description {
 			font-weight: 500;
-
+			font-size: 3vw;
 			color: white;
 			text-align: center;
 			margin-bottom: 10px;

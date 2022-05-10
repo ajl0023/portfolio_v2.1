@@ -13,6 +13,7 @@
 	<Navbar />
 	<slot />
 	<About />
+	<div class="test"></div>
 </div>
 
 <style lang="scss">

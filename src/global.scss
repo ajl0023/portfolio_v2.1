@@ -11,13 +11,13 @@ code[class*='language-'] {
 	overflow-y: hidden !important;
 	word-break: break-word;
 }
-html {
-	background: linear-gradient(#2c5e92, #552f6d);
-	background-attachment: fixed;
-	margin: 0;
-	background-repeat: no-repeat;
-}
+
 body {
 	max-width: 100%;
 	overflow-x: hidden;
+	background: linear-gradient(#2c5e92, #552f6d);
+	background-attachment: fixed;
+	background-position: center center;
+	margin: 0;
+	background-repeat: no-repeat;
 }
