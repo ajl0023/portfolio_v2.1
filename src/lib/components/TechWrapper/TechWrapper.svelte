@@ -5,13 +5,33 @@
 	import Javascript from '$lib/svgs/technologyImages/javascript.svelte';
 	import Mysql from '$lib/svgs/technologyImages/mysql.svelte';
 	import Node from '$lib/svgs/technologyImages/node.svelte';
+	import Python from '$lib/svgs/technologyImages/python.svelte';
 	import React from '$lib/svgs/technologyImages/react.svelte';
+	import Svelte from '$lib/svgs/technologyImages/svelte.svelte';
 </script>
 
 <script>
 	import { onMount, tick } from 'svelte';
 
 	let techComponents = [
+		{
+			label: 'Js ES6',
+			component: Javascript
+		},
+		{
+			label: 'React',
+			component: React
+		},
+
+		{
+			label: 'MySql',
+			component: Mysql
+		},
+
+		{
+			label: 'Python',
+			component: Python
+		},
 		{
 			label: 'Css',
 			component: Css3
@@ -20,10 +40,7 @@
 			label: 'Github',
 			component: Github
 		},
-		{
-			label: 'Js ES6',
-			component: Javascript
-		},
+
 		{
 			label: 'Node',
 			component: Node
@@ -33,12 +50,8 @@
 			component: Html5
 		},
 		{
-			label: 'MySql',
-			component: Mysql
-		},
-		{
-			label: 'React',
-			component: React
+			label: 'Svelte',
+			component: Svelte
 		}
 	];
 </script>
@@ -72,7 +85,7 @@
 		margin-bottom: 1rem;
 		font-weight: 500;
 		text-align: center;
-		font-size: 20px;
+		font-size: 1em;
 		@include min-screen($mobile-md) {
 			font-size: 20px;
 		}
@@ -89,13 +102,23 @@
 		width: 100%;
 		padding: 10px;
 		display: flex;
+		overflow-x: auto;
+
 		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 	}
 	.icon-container {
-		width: 5%;
+		width: 40px;
+		&:not(:last-child) {
+			margin-right: 15px;
+		}
+
+		flex-shrink: 0;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		@include min-screen($mobile-md) {
+			width: 50px;
+		}
 		.tech-label {
 			font-size: 10px;
 			text-align: center;

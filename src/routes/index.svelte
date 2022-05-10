@@ -100,7 +100,7 @@
 
 		overflow: hidden;
 
-		padding: 30px;
+		padding: 10px;
 	}
 
 	.sub-groups {
@@ -138,7 +138,7 @@
 		.main-title {
 			text-align: left;
 			margin-bottom: 3rem;
-			font-size: 5em;
+			font-size: 3em;
 			line-height: 1;
 			@include min-screen($mobile-md) {
 				font-size: 3em;

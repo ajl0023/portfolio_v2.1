@@ -1,0 +1,1 @@
+npm run build && git add . && git commit -m "few style changes" && git push origin main

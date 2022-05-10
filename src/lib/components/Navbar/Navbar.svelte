@@ -67,6 +67,7 @@
 		@include min-screen($desktop-md) {
 			top: 50%;
 			left: 0;
+			right: auto;
 			transform: translateY(-50%);
 		}
 		.icons-container {
